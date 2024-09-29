@@ -1,0 +1,389 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/g_animate"
+    android:id="@+id/root_layout">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Product Image Gallery -->
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/productImageViewPager"
+            android:layout_width="match_parent"
+            android:background="@drawable/border_with_white_background"
+            android:layout_height="250dp"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/indicatorsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp" />
+
+
+        <!-- Product Name -->
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Product Price -->
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/black"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Product Brand -->
+        <TextView
+            android:id="@+id/productBrand"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/grey"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Separator -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/grey" />
+
+
+        <!-- Containers with detailed information's of products-->
+        <LinearLayout
+            android:id="@+id/caseDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/caseFormFactorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form Factor: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/colorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/powerSupplyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Power Supply: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/maxGpuSizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max GPU Size: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/maxCoolingSizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Max Cooling Size: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/coolingDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/typeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/fansTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fans: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/radiatorSizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Radiator Size: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/graphicsCardDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/coreClockTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Core Clock: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/graphicCardBoostClockTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boost Clock: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/recommendedWattageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Recommended Wattage: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/sizeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ssdDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/ssdCapacityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacity: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/interfaceTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of interface: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/ssdFormFactorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Form factor: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/processorDetailsContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/coresTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of cores: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/threadsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of threads: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/baseClockTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Base clock: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/processorBoostClockTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Boost clock: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/processorSocketTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of socket: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/powerSupplyDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/wattageTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wattage: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/modularityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modularity: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/efficiencyRatingTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Efficiency rating: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/motherboardsDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/chipsetTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of chipset: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/motherboardFormFactorTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of form factor: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/motherboardSocketTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of socket: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/memorySlotsTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Number of memory slots: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/memoryStandardTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Standard of memory: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/memoryDetailContainer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginTop="16dp">
+            <TextView
+                android:id="@+id/memoryTypeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type of memory: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/ramCapacityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Capacity: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/quantityTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity: "
+                android:textSize="16sp" />
+            <TextView
+                android:id="@+id/speedTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Speed: "
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Buttons Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="24dp">
+
+            <Button
+                android:id="@+id/addToCartButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Add to Cart"
+                android:background="@drawable/button_background"
+                android:textColor="@android:color/white"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/buyNowButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Buy Now"
+                android:background="@drawable/button_background"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/favoriteButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:layout_gravity="end"
+                android:layout_marginStart="5dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:src="@drawable/ic_favorite_border"
+                android:contentDescription="@string/add_to_favorites"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addToConfiguratorButton"
+            android:layout_marginTop="10dp"
+            android:text="@string/add_to_configurator_button"
+            android:background="@drawable/checkbox_background"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/button_background"
+        android:text="Go back"/>
+</RelativeLayout>

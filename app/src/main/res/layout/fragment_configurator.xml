@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:gravity="center_horizontal"
+        android:text="@string/configurator"
+        android:layout_marginBottom="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <!-- Case -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/caseLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Case:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/caseProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:paddingEnd="20dp"
+                android:layout_toEndOf="@id/caseLabel"
+                android:layout_toStartOf="@id/removeCaseButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removeCaseButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove Case"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <!-- Memory -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/memoryLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Memory:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/memoryProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="10dp"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/memoryLabel"
+                android:layout_toStartOf="@id/removeMemoryButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removeMemoryButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove Memory"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <!-- SSD -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/ssdLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SSD:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/ssdProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:textSize="16sp"
+                android:paddingEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/ssdLabel"
+                android:layout_toStartOf="@id/removeSsdButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removeSsdButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove SSD"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <!-- Power Supply -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/powerSupplyLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Power Supply:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/powerSupplyProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/powerSupplyLabel"
+                android:layout_toStartOf="@id/removePowerSupplyButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removePowerSupplyButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove Power Supply"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <!-- Motherboard -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/motherboardLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Motherboard:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/motherboardProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:paddingEnd="20dp"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="10dp"
+                android:textSize="16sp"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/motherboardLabel"
+                android:layout_toStartOf="@id/removeMotherboardButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removeMotherboardButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove Motherboard"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <!-- Processor -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/processorLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Processor:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/processorProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/processorLabel"
+                android:layout_toStartOf="@id/removeProcessorButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removeProcessorButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove Processor"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <!-- Graphic Card -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/graphicCardLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Graphic Card:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/graphicCardProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:paddingEnd="20dp"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/graphicCardLabel"
+                android:layout_toStartOf="@id/removeGraphicCardButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removeGraphicCardButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove Graphic Card"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+
+        <!-- Cooling -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/coolingLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cooling:"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true" />
+
+            <TextView
+                android:id="@+id/coolingProductName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="No product selected"
+                android:textSize="16sp"
+                android:layout_alignParentEnd="true"
+                android:textAlignment="viewEnd"
+                android:paddingEnd="20dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@color/grey"
+                android:layout_toEndOf="@id/coolingLabel"
+                android:layout_toStartOf="@id/removeCoolingButton"
+                android:layout_centerVertical="true"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"/>
+
+            <ImageButton
+                android:id="@+id/removeCoolingButton"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_remove"
+                android:contentDescription="Remove Cooling"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                android:scaleType="fitCenter"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/configuratorMessage"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:text=""
+        android:textSize="16sp"
+        android:background="@drawable/promo_item_background"
+        android:textColor="@color/red"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+
+    <TextView
+        android:id="@+id/configuratorTotalPrice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Price: 0.00 zl"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_marginBottom="20dp"
+        />
+
+    <!-- Buttons section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/addAllToCartButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add All to Cart"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/buyAllNowButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Buy All Now"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/clearConfiguratorButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Clear Configurator"
+            android:layout_weight="1"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>
