@@ -10,4 +10,4 @@ Firebase database
 How to run in Android Studio:
 1. Open project folder in Android studio
 2. Select device to run the app: with provided emulator with devices Android system at least 6.0 or with personal smartphone after plugging it to the computer via USB port
-3. Run the app simply by keybord shortcut shift+F10
+3. Run the app simply by keyboard shortcut shift+F10
